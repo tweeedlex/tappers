@@ -1,0 +1,15 @@
+import React from 'react';
+import Image from "next/image";
+import Container from "@/components/layout/Container";
+
+const Header: React.FC = () => {
+  return (
+    <header className={"height-header relative z-[6] flex justify-center"}>
+      <Container>
+        <Image src={"/img/logo.png"} alt={"logo"} width={64} height={64} className={"h-[70px] w-[52px]"} />
+      </Container>
+    </header>
+  );
+};
+
+export default Header;

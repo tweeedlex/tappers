@@ -9,9 +9,23 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
+        background: "var(--color-background)",
+        foreground: "var(--color-foreground)",
+        pink: "var(--color-pink)",
+        lightPink: "var(--color-light-pink)",
+        lilac: "var(--color-lilac)",
+        purple: "var(--color-purple)",
+        blue: "var(--color-blue)",
       },
+      textColor: {
+        primary: "var(--color-primary-font)",
+        secondary: "var(--color-secondary-font)",
+      },
+      height: {
+        header: "var(--height-header)",
+      }
     },
   },
   plugins: [],
