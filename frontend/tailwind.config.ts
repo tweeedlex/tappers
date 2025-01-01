@@ -14,7 +14,7 @@ export default {
         background: "var(--color-background)",
         foreground: "var(--color-foreground)",
         pink: "var(--color-pink)",
-        lightPink: "var(--color-light-pink)",
+        lightpink: "var(--color-light-pink)",
         lilac: "var(--color-lilac)",
         purple: "var(--color-purple)",
         blue: "var(--color-blue)",
@@ -22,6 +22,7 @@ export default {
       textColor: {
         primary: "var(--color-primary-font)",
         secondary: "var(--color-secondary-font)",
+        subtitle: "var(--color-subtitle-font)",
       },
       height: {
         header: "var(--height-header)",

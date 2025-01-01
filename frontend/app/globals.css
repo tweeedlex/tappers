@@ -3,18 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #4a90e2;
-  --color-secondary: #50e3c2;
-  --color-background: radial-gradient(271.5% 115.54% at 5% 16.38%, #100913 0%, #000 100%);
-  --color-foreground: #fff;
-  --color-primary-font: #fff;
-  --color-secondary-font: #666666;
 
   --color-pink: #FF54CD;
   --color-light-pink: #E449C9;
   --color-lilac: #DA50FE;
   --color-purple: #7004A3;
   --color-blue: linear-gradient(130deg, #7E34FF 6.17%, #5E00FF 45.1%, #5E00FF 68.56%, #4900C6 94.53%);
+
+  --color-primary: var(--color-light-pink);
+  --color-secondary: #50e3c2;
+  --color-background: radial-gradient(271.5% 115.54% at 5% 16.38%, #100913 0%, #000 100%);
+  --color-foreground: #fff;
+  --color-primary-font: #fff;
+  --color-secondary-font: var(--color-light-pink);
+  --color-subtitle-font: rgba(255, 255, 255, 0.6);
 
   --height-header: 70px;
 }
@@ -24,6 +26,8 @@
   }
 }
 
+/* ------------------------------------------------------------ */
+
 body {
   color: var(--color-foreground);
   background: var(--color-background);
@@ -32,4 +36,15 @@ body {
 
 img {
   max-width: unset!important;
+}
+
+.h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-primary-font);
+}
+
+.subtitle {
+    color: var(--color-subtitle-font);
+    font-size: 14px;
 }
