@@ -23,7 +23,7 @@ const generateClasses = (variant: string) => {
       return "bg-blue-500 text-white px-4 py-2 rounded";
     case "secondary":
       return `
-        flex justify-center items-center gap-2 border-[1px] px-10 py-4 rounded-[16px] max-w-[fit-content]
+        border-[1px] px-2 m:px-4 xl:px-8 py-1 m:py-2 xl:py-4 xxl:px-10 rounded-[4px] m:rounded-[8px] l:rounded-[12px] xl:rounded-[16px] py-4 rounded-[16px] max-w-[fit-content]
       `;
     default:
       return "bg-blue-500 text-white px-4 py-2 rounded";

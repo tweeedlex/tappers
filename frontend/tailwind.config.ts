@@ -25,6 +25,14 @@ export default {
       },
       height: {
         header: "var(--height-header)",
+      },
+      screens: {
+        xs: "360px",
+        s: "425px",
+        m: "768px",
+        l: "1024px",
+        xl: "1280px",
+        xxl: "1440px",
       }
     },
   },
