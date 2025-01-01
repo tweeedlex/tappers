@@ -16,25 +16,61 @@ const Hero: FC = () => {
         <div className={classNames("top-[32%] left-[20%]", styles.shadeBlue)}></div>
         <div className={classNames("top-[14%] right-0", styles.shadeBlue)}></div>
       </div>
-      <Container className={"h-full m:h-[fit-content] relative"}>
+      <Container className={"h-full flex items-center relative"}>
         <div className={"flex flex-col m:relative absolute m:top-0 top-[var(--height-header)] py-3 m:py-0 left-[50%] m:left-0 translate-x-[-50%] m:translate-x-0 gap-3 z-[5]"}>
           <h1 className={classNames(styles.heading, "relative z-[5] text-center m:text-left left-0 xl:left-[200px] l:left-20 m:left-10")}>TAPPERS</h1>
           <h1 className={classNames(styles.heading, styles.white, "relative text-center m:text-left left-0 xl:left-[320px] l:left-40 m:left-20")}>STUDIOS</h1>
           <Button
             variant={"secondary"}
-            className={"flex justify-center items-center gap-1 l:gap-2 relative left-[80px] xxl:left-[520px] xl:left-[440px] l:left-[240px] m:left-[140px]"}
+            className={"flex justify-center items-center gap-1 l:gap-2 relative left-[80px] m:left-[140px] l:left-[240px] xl:left-[440px] xxl:left-[520px]"}
           >
             <p className={"uppercase leading-[100%] l:text-[16px] text-[12px]"}>See our works</p>
             <Image src={"/img/landing/hero/arrow.png"} alt={""} width={24} height={24} className={"l:h-6 h-4 l:w-6 w-4"} />
           </Button>
         </div>
-        <div className={"absolute top-[100px] m:top-0 m:right-0 left-[50%] translate-x-[-50%] m:translate-x-0 z-[4] h-full"}>
+        <div
+          className={classNames(styles.image, "z-[4] absolute l:w-[500px] w-[400px] h-[500px] scale-50 m:scale-[60%] l:scale-75 xl:scale-100 m:top-[50%] m:translate-y-[-50%] m:right-[0] m:left-[unset] m:bottom-0 bottom-10 left-[50%] translate-x-[-50%] m:translate-x-0")}
+        >
           <Image
             src={"/img/landing/hero/object.png"}
-            className={"absolute scale-50 m:scale-[60%] translate-x-1/2 m:translate-x-0 right-[50%] m:right-0 l:scale-75 xl:scale-100 top-[calc(50%-200px)] xl:right-[110px] l:right-[60px]"}
             alt={""}
             width={450}
             height={450}
+          />
+          <Image
+            src={"/img/landing/hero/particle1.png"}
+            className={"absolute bottom-[-28%] right-[40%]"}
+            alt={""}
+            width={101}
+            height={96}
+          />
+          <Image
+            src={"/img/landing/hero/particle2.png"}
+            className={"absolute top-[0] right-[6%] rotate-90"}
+            alt={""}
+            width={40}
+            height={36}
+          />
+          <Image
+            src={"/img/landing/hero/particle3.png"}
+            className={"absolute top-[14%] left-[-20%]"}
+            alt={""}
+            width={40}
+            height={36}
+          />
+          <Image
+            src={"/img/landing/hero/particle4.png"}
+            className={"absolute top-[-12%] left-[-8%]"}
+            alt={""}
+            width={77}
+            height={108}
+          />
+          <Image
+            src={"/img/landing/hero/particle2.png"}
+            className={"absolute bottom-[0] right-[20%]"}
+            alt={""}
+            width={40}
+            height={36}
           />
         </div>
       </Container>
