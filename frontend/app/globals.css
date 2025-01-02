@@ -44,6 +44,16 @@ img {
   color: var(--color-primary-font);
 }
 
+.h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-primary-font);
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+
 .subtitle {
     color: var(--color-subtitle-font);
     font-size: 14px;

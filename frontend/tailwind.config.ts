@@ -24,9 +24,6 @@ export default {
         secondary: "var(--color-secondary-font)",
         subtitle: "var(--color-subtitle-font)",
       },
-      height: {
-        header: "var(--height-header)",
-      },
       screens: {
         xs: "360px",
         s: "425px",
@@ -34,6 +31,12 @@ export default {
         l: "1024px",
         xl: "1280px",
         xxl: "1440px"
+      },
+      height: {
+        header: "var(--height-header)",
+      },
+      gridTemplateColumns: {
+        "review": "1fr 2fr",
       }
     },
   },
