@@ -3,10 +3,10 @@
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 
-import React, {FC, useEffect} from 'react';
+import React, {FC} from 'react';
 import Container from "@/components/layout/Container";
 import {Swiper, SwiperSlide} from "swiper/react";
-import { EffectCoverflow } from 'swiper/modules';
+import { EffectCoverflow, Autoplay } from 'swiper/modules';
 import Review from "./components/Review";
 
 const Reviews: FC = () => {
@@ -41,11 +41,11 @@ const Reviews: FC = () => {
     }
   ]
 
-  const isSmall: boolean = window.innerWidth < 1023;
+  const isSmall: boolean = window.innerWidth < 1440;
 
   return (
-    <Container className={"m:py-10 s:py-5 py-3"}>
-      <h2 className={"h2 m:py-6 py-3 text-center"}><span className={"text-pink"}>100% totally satisfied</span> customers
+    <div className={"w-full m:py-10 s:py-5 py-3"}>
+      <h2 className={"h2 m:py-6 py-3 text-center"}><span className={"text-pink"}>100% of totally satisfied</span> customers
       </h2>
       <Swiper
         effect={'coverflow'}
@@ -59,9 +59,11 @@ const Reviews: FC = () => {
           modifier: 1,
           slideShadows: true,
         }}
-        modules={[EffectCoverflow]}
+        modules={[EffectCoverflow, Autoplay]}
         loop={true}
-        autoplay={true}
+        autoplay={{
+          delay: 5000,
+        }}
       >
         {reviews.map(review => (
           <SwiperSlide key={review.id}>
@@ -69,7 +71,7 @@ const Reviews: FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </Container>
+    </div>
   );
 };
 
