@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit, Anton } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
 
 const outfit = Outfit({
   variable: "--font-outfit",

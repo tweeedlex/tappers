@@ -4,7 +4,6 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 
 import React, {FC} from 'react';
-import Container from "@/components/layout/Container";
 import {Swiper, SwiperSlide} from "swiper/react";
 import { EffectCoverflow, Autoplay } from 'swiper/modules';
 import Review from "./components/Review";
