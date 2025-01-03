@@ -47,7 +47,7 @@ const FAQ: FC = () => {
     <Container className={"flex py-15 flex-col gap-4 items-center"}>
       <p className={"text-secondary text-sm"}>Support</p>
       <h2 className={"h2 text-center"}>Got Questions? We've Got Answers!</h2>
-      <p className={"subtitle text-center"}>The questions we get the most</p>
+      <p className={"subtitle text-center"}>The questions we get asked the most</p>
       <div className={"w-full max-w-[600px] flex flex-col gap-3 items-start"}>
         {questions.map((question) => (
           <div key={question.id} className={"flex flex-col gap-3"}>

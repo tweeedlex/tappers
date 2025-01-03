@@ -15,7 +15,8 @@ const anton = Anton({
 
 export const metadata: Metadata = {
   title: "TAPPERS studio",
-  description: "TAPPERS - leading agency in the field of Telegram mini apps development",
+  description: "TAPPERS - leading studio in the field of Telegram mini apps development. " +
+    "We create unique and innovative games and apps with a focus on user experience.",
 };
 
 export default function RootLayout({
