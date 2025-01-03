@@ -5,6 +5,7 @@ import Portfolio from "./components/Portfolio";
 import Reviews from "./components/Reviews";
 import ContactUs from "./components/ContactUs";
 import FAQ from "./components/FAQ";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Reviews />
       <ContactUs />
       <FAQ />
+      <Footer />
     </div>
   );
 }
