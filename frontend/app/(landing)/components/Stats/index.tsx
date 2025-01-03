@@ -22,7 +22,7 @@ const Stats: FC = () => {
   ]
 
   return (
-    <Container className={"m:py-10 s:py-5 py-3"}>
+    <Container className={"py-20"}>
       <div className={"flex flex-col gap-3"}>
         <h2 className={"h2"}>Tappers created popular games and apps with 500k+ users</h2>
         <p className={"subtitle"}>

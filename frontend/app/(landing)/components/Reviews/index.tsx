@@ -43,7 +43,7 @@ const Reviews: FC = () => {
   const isSmall: boolean = window.innerWidth < 1440;
 
   return (
-    <div className={"w-full m:py-10 s:py-5 py-3"}>
+    <div className={"w-full py-20"}>
       <h2 className={"h2 m:py-6 py-3 text-center"}><span className={"text-pink"}>100% of totally satisfied</span> customers
       </h2>
       <Swiper
