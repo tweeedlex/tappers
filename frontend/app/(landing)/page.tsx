@@ -3,7 +3,8 @@ import Hero from "./components/Hero";
 import Stats from "./components/Stats";
 import Portfolio from "./components/Portfolio";
 import Reviews from "./components/Reviews";
-import ContactUs from "@/app/(landing)/components/ContactUs";
+import ContactUs from "./components/ContactUs";
+import FAQ from "./components/FAQ";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Portfolio />
       <Reviews />
       <ContactUs />
+      <FAQ />
     </div>
   );
 }

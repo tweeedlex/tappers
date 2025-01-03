@@ -3,7 +3,7 @@
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 
-import React, {FC} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import {Swiper, SwiperSlide} from "swiper/react";
 import { EffectCoverflow, Autoplay } from 'swiper/modules';
 import Review from "./components/Review";
@@ -40,7 +40,19 @@ const Reviews: FC = () => {
     }
   ]
 
-  const isSmall: boolean = window.innerWidth < 1440;
+  const [isSmall, setIsSmall] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmall(window.innerWidth < 1440);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div className={"w-full py-20"}>
