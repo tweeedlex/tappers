@@ -3,15 +3,16 @@ import classNames from "classnames";
 
 interface Props {
   children: React.ReactNode;
+  onClick?: () => void;
   variant: string;
   className?: string;
 }
 
-const Button: FC<Props> = ({ children, variant = "default", className }) => {
+const Button: FC<Props> = ({ children, variant = "default", className, onClick }) => {
   const classList = classNames(generateClasses(variant), className);
 
   return (
-    <button className={classList}>
+    <button onClick={onClick} className={classList}>
       {children}
     </button>
   );

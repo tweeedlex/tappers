@@ -60,7 +60,7 @@ const Portfolio = () => {
 
 
   return (
-    <div>
+    <div id={"portfolio"}>
       <h2 className="h2 text-center py-20 px-3">
         <span className="text-secondary">Unique</span> ideas generate <span className="text-secondary">impressive</span> apps
       </h2>
@@ -74,7 +74,7 @@ const Portfolio = () => {
               centeredSlides={true}
               direction="vertical"
               mousewheel={true}
-              speed={300}  // Added consistent animation speed
+              speed={300}
               loop={true}
               slidesPerView={1.75}
               slidesOffsetBefore={-125}
