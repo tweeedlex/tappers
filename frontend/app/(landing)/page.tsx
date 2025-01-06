@@ -1,7 +1,7 @@
 import Header from "@/components/layout/Header";
 import Hero from "./components/Hero";
 import Stats from "./components/Stats";
-import Portfolio from "./components/Portfolio";
+import Works from "./components/Works";
 import Reviews from "./components/Reviews";
 import ContactUs from "./components/ContactUs";
 import FAQ from "./components/FAQ";
@@ -13,10 +13,11 @@ export default function Home() {
       <Header />
       <Hero />
       <Stats />
-      <Portfolio />
+      {/*<Portfolio />*/}
       <Reviews />
       <ContactUs />
       <FAQ />
+      <Works />
       <Footer />
     </div>
   );

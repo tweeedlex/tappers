@@ -1,0 +1,67 @@
+import React, { FC } from 'react';
+import Container from "@/components/layout/Container";
+import Image from "next/image";
+import classNames from "classnames";
+
+const Works: FC = () => {
+  const works = [
+    {
+      img: "crabs.jpg",
+      title: "Crabs",
+      description: "An interesting project with a lot of interactivity. The project implements unique " +
+        "solutions: daily tasks, mini-games (secret box, combo), list of top users, store of improvements and temporary " +
+        "boosts, referral system and much more."
+    },
+    {
+      img: "hempton.jpg",
+      title: "Hempton",
+      description: "An interesting project with a lot of interactivity. The project implements unique " +
+        "solutions: daily tasks, mini-games (secret box, combo), list of top users, store of improvements and temporary " +
+        "boosts, referral system and much more."
+    },
+    {
+      img: "poke.jpg",
+      title: "Pokie",
+      description: "An interesting project with a lot of interactivity. The project implements unique " +
+        "solutions: daily tasks, mini-games (secret box, combo), list of top users, store of improvements and temporary " +
+        "boosts, referral system and much more."
+    },
+    {
+      img: "tonero.jpg",
+      title: "Tonero",
+      description: "An interesting project with a lot of interactivity. The project implements unique " +
+        "solutions: daily tasks, mini-games (secret box, combo), list of top users, store of improvements and temporary " +
+        "boosts, referral system and much more."
+    },
+  ]
+
+  return (
+    <Container className={"py-5"}>
+      <h2 className={"h2 text-center py-10"}> Some of our <span className={"text-secondary"}>favourite</span> projects </h2>
+      <div className={"flex flex-col gap-10 items-center"}>
+        {
+          works.map((work, i) => (
+            <div key={work.title} className={classNames("flex items-center m:gap-20 s:gap-6 gap-4 justify-center", i % 2 && "flex-row-reverse")}>
+              <div className={"overflow-hidden rounded-2xl m:min-w-[360px] s:min-w-[180px] min-w-[140px]"}  style={{ boxShadow: "0 3px 20px rgba(255, 255, 255, 0.2)" }}>
+                <Image
+                  className={"hover:scale-105 w-full"}
+                  style={{ transition: "all .6s cubic-bezier(.08,.7,.63,.8)" }}
+                  width={360}
+                  height={575}
+                  src={`/img/landing/works/${work.img}`}
+                  alt={""}
+                />
+              </div>
+              <div className={"flex flex-col gap-2 m:gap-4 m:w-[300px]"}>
+                <p className={"m:text-5xl text-2xl"}>{work.title}</p>
+                <p className={"subtitle m:text-sm text-xs"}>{work.description}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </Container>
+  );
+};
+
+export default Works;
