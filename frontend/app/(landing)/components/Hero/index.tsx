@@ -18,8 +18,8 @@ const Hero: FC = () => {
       </div>
       <Container className={"h-full flex items-center relative"}>
         <div className={"flex flex-col m:relative absolute m:top-0 top-[var(--height-header)] py-3 m:py-0 left-[50%] m:left-0 translate-x-[-50%] m:translate-x-0 gap-3 z-[5]"}>
-          <h1 className={classNames(styles.heading, "relative z-[5] text-center m:text-left left-0 xl:left-[200px] l:left-20 m:left-10")}>TAPPERS</h1>
-          <h1 className={classNames(styles.heading, styles.white, "relative text-center m:text-left left-0 xl:left-[320px] l:left-40 m:left-20")}>STUDIOS</h1>
+          <h1 className={classNames(styles.heading, "animate__animated animate__fadeInTopLeft relative z-[5] text-center m:text-left left-0 xl:left-[200px] l:left-20 m:left-10")}>TAPPERS</h1>
+          <h1 className={classNames(styles.heading, styles.white, "animate__animated animate__fadeInBottomLeft relative text-center m:text-left left-0 xl:left-[320px] l:left-40 m:left-20")}>STUDIOS</h1>
           <ScrollButton />
         </div>
         <div
@@ -30,38 +30,39 @@ const Hero: FC = () => {
             alt={""}
             width={450}
             height={450}
+            className={"animate__animated animate__fadeInRight"}
           />
           <Image
             src={"/img/landing/hero/particle1.png"}
-            className={"absolute bottom-[-28%] right-[40%]"}
+            className={"animate__animated animate__fadeInRight absolute bottom-[-28%] right-[40%]"}
             alt={""}
             width={101}
             height={96}
           />
           <Image
             src={"/img/landing/hero/particle2.png"}
-            className={"absolute top-[0] right-[6%] rotate-90"}
+            className={"animate__animated animate__fadeInRight absolute top-[0] right-[6%] rotate-90"}
             alt={""}
             width={40}
             height={36}
           />
           <Image
             src={"/img/landing/hero/particle3.png"}
-            className={"absolute top-[14%] left-[-20%]"}
+            className={"animate__animated animate__fadeInRight absolute top-[14%] left-[-20%]"}
             alt={""}
             width={40}
             height={36}
           />
           <Image
             src={"/img/landing/hero/particle4.png"}
-            className={"absolute top-[-12%] left-[-8%]"}
+            className={"animate__animated animate__fadeInRight absolute top-[-12%] left-[-8%]"}
             alt={""}
             width={77}
             height={108}
           />
           <Image
             src={"/img/landing/hero/particle2.png"}
-            className={"absolute bottom-[0] right-[20%]"}
+            className={"animate__animated animate__fadeInRight absolute bottom-[0] right-[20%]"}
             alt={""}
             width={40}
             height={36}

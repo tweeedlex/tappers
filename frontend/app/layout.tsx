@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Anton } from "next/font/google";
 import "../styles/globals.css";
 import {ToastContainer} from "react-toastify";
+import "animate.css";
 
 const outfit = Outfit({
   variable: "--font-outfit",
