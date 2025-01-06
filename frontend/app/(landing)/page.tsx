@@ -9,7 +9,7 @@ import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center font-[family-name:var(--font-outfit-sans)]">
+    <div className="flex flex-col gap-[50px] l:gap-20 xl:gap-30 items-center font-[family-name:var(--font-outfit-sans)]">
       <Header />
       <Hero />
       <Stats />

@@ -36,8 +36,8 @@ const Works: FC = () => {
   ]
 
   return (
-    <Container className={"py-5"}>
-      <h2 id={"portfolio"} className={"h2 text-center py-10"}> Some of our <span className={"text-secondary"}>favourite</span> projects </h2>
+    <Container>
+      <h2 id={"portfolio"} className={"h2 text-center pb-10"}> Some of our <span className={"text-secondary"}>favourite</span> projects </h2>
       <div className={"flex flex-col gap-10 items-center"}>
         {
           works.map((work, i) => (

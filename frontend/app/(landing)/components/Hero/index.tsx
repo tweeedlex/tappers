@@ -7,7 +7,7 @@ import ScrollButton from "./components/ScrollButton";
 
 const Hero: FC = () => {
   return (
-    <div className={classNames("relative w-full h-screen flex items-center justify-center", styles.hero)}>
+    <div className={classNames("relative mb-[-120px] w-full h-screen flex items-center justify-center", styles.hero)}>
       <div className={"z-[2] absolute top-0 left-0 w-full h-full"}>
         <div className={classNames("top-[-10%] left-[-5%]", styles.shade)}></div>
         <div className={classNames("top-[13%] left-[22%]", styles.shade)}></div>

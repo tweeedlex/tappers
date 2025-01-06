@@ -33,7 +33,7 @@ const ContactUs: FC = () => {
   };
 
   return (
-    <Container className={"py-20 flex flex-col gap-5 items-center"}>
+    <Container className={"flex flex-col gap-5 items-center"}>
         <p className={"text-secondary text-sm"}>Contact us</p>
         <h2 className={"h2"}>Let's Talk!</h2>
         <p className={"subtitle"}>We know that you want to implement your idea in reality. Why shouldn't we do this together?</p>

@@ -7,6 +7,7 @@ import React, {FC, useEffect, useState} from 'react';
 import {Swiper, SwiperSlide} from "swiper/react";
 import { EffectCoverflow, Autoplay } from 'swiper/modules';
 import Review from "./components/Review";
+import Container from "@/components/layout/Container";
 
 const Reviews: FC = () => {
   const reviews = [
@@ -55,9 +56,8 @@ const Reviews: FC = () => {
   }, []);
 
   return (
-    <div className={"w-full py-20"}>
-      <h2 className={"h2 m:py-6 py-3 text-center"}><span className={"text-pink"}>100% of totally satisfied</span> customers
-      </h2>
+    <div className={"w-full"}>
+      <h2 className={"h2 m:py-6 py-3 px-2 text-center"}><span className={"text-pink"}>100% of totally satisfied</span> customers</h2>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
