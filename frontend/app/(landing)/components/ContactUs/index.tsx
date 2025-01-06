@@ -5,6 +5,8 @@ import Input from "@/components/ui/Input";
 import TextArea from "@/components/ui/TextArea";
 import Button from "@/components/ui/Button";
 import Container from "@/components/layout/Container";
+import {addContact} from "@/requests/contact";
+import {toastError, toastSuccess} from "@/helpers/toasts";
 
 const ContactUs: FC = () => {
   const [formInfo, setFormInfo] = useState({
@@ -13,6 +15,22 @@ const ContactUs: FC = () => {
     budget: "",
     message: ""
   });
+
+  const formValidation = () => {
+    return !(!formInfo.name || !formInfo.email || !formInfo.budget || !formInfo.message);
+  }
+
+  const handleSubmit = async () => {
+    if (!formValidation()) {
+      return toastError("Please fill all the fields");
+    }
+    const response = await addContact(formInfo);
+
+    if (response.error) {
+      return toastError("Unexpected error occurred. Please try again later.");
+    }
+    toastSuccess("Thank you for your message! We will contact you soon.");
+  };
 
   return (
     <Container className={"py-20 flex flex-col gap-5 items-center"}>
@@ -36,7 +54,7 @@ const ContactUs: FC = () => {
             <p className={"text-sm text-primary"}>Message</p>
             <TextArea className={"w-full h-[100px]"} placeholder={"Feel free to share your thoughts on the project!"} value={formInfo.message} onChange={(value: string) => setFormInfo({...formInfo, message: value})}/>
           </div>
-          <Button variant={"primary"} className={"m:min-w-[unset] mt-4 m:max-w-[fit-content] min-w-full mac-w-unset'"}>Submit</Button>
+          <Button onClick={handleSubmit} variant={"primary"} className={"m:min-w-[unset] mt-4 m:max-w-[fit-content] min-w-full mac-w-unset'"}>Submit</Button>
         </div>
     </Container>
   );

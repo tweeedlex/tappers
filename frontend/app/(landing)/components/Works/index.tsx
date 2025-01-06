@@ -37,7 +37,7 @@ const Works: FC = () => {
 
   return (
     <Container className={"py-5"}>
-      <h2 className={"h2 text-center py-10"}> Some of our <span className={"text-secondary"}>favourite</span> projects </h2>
+      <h2 id={"portfolio"} className={"h2 text-center py-10"}> Some of our <span className={"text-secondary"}>favourite</span> projects </h2>
       <div className={"flex flex-col gap-10 items-center"}>
         {
           works.map((work, i) => (
@@ -52,7 +52,7 @@ const Works: FC = () => {
                   alt={""}
                 />
               </div>
-              <div className={"flex flex-col gap-2 m:gap-4 m:w-[300px]"}>
+              <div className={classNames("flex flex-col gap-2 m:gap-4 m:w-[300px]", (i % 2) && "text-right")}>
                 <p className={"m:text-5xl text-2xl"}>{work.title}</p>
                 <p className={"subtitle m:text-sm text-xs"}>{work.description}</p>
               </div>

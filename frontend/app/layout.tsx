@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit, Anton } from "next/font/google";
 import "../styles/globals.css";
+import {ToastContainer} from "react-toastify";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -30,6 +31,18 @@ export default function RootLayout({
         className={`${outfit.variable} ${anton.variable} font-[family-name:var(--font-outfit)] antialiased`}
       >
         <div className={"min-h-screen bg-background overflow-x-hidden"}>
+          <ToastContainer
+            position="top-right"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover={false}
+            theme="dark"
+          />
           {children}
         </div>
       </body>
