@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import Container from "@/components/layout/Container";
+import NumberAnimation from "@/app/(landing)/components/Stats/components/NumberAnimation";
 
 const Stats: FC = () => {
   const blocks = [
@@ -19,7 +20,7 @@ const Stats: FC = () => {
       title: "100%",
       subtitle: "Satisfaction rate"
     }
-  ]
+  ];
 
   return (
     <Container>
@@ -32,7 +33,14 @@ const Stats: FC = () => {
           {blocks.map((block, index) => (
             <li key={index} className={"flex flex-col gap-3 m:w-[calc(25%-16px)] w-full"}>
               <hr className={"w-full h-[2px] bg-primary"} />
-              <h3 className={"text-4xl text-secondary font-bold"}>{block.title}</h3>
+              <h3 className={"text-4xl text-secondary font-bold"}>
+                <NumberAnimation duration={1000 + index * 200}>
+                  {parseInt(block.title)}
+                </NumberAnimation>
+                <span>
+                  {block.title.replace(/\d+/g, '')}
+                </span>
+              </h3>
               <p>{block.subtitle}</p>
             </li>
           ))}
