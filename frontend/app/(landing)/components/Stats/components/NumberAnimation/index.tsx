@@ -7,7 +7,7 @@ interface Props {
 }
 
 const NumberAnimation: FC<Props> = ({ children, duration = 1000 }) => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(1);
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
 

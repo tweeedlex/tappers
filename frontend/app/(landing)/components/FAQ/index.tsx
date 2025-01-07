@@ -1,5 +1,5 @@
 import Container from "@/components/layout/Container";
-import FAQList from "./FAQList";
+import FAQList from "./components/FAQList";
 import { getFaqs } from "@/requests/faqs";
 
 export default async function FAQ() {

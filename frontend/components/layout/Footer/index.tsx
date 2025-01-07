@@ -1,8 +1,11 @@
 import React, {FC} from 'react';
 import Container from "@/components/layout/Container";
 import Image from "next/image";
+import {getSocials} from "@/requests/socials";
 
-const Footer: FC = () => {
+const Footer: FC = async () => {
+  const {data: socials} = await getSocials()
+
   return (
     <footer className={"py-10 w-full flex s:px-0 px-2 justify-center"}>
       <Container className={"flex relative items-center gap-5 justify-between"}>
@@ -28,16 +31,15 @@ const Footer: FC = () => {
         </nav>
         <nav>
           <ul className={"absolute top-[110px] right-0 s:static flex gap-2"}>
-            <li>
-              <a href={"#"}>
-                <Image src={"/img/footer/socials/telegram.png"} alt={""} width={36} height={36}/>
-              </a>
-            </li>
-            <li>
-              <a href={"#"}>
-                <Image src={"/img/footer/socials/instagram.png"} alt={""} width={36} height={36}/>
-              </a>
-            </li>
+            {
+              socials.map(social => (
+                <li key={social.id}>
+                  <a href={social.link}>
+                    <Image src={`${process.env.NEXT_PUBLIC_API_URL}${social.icon.url}`} alt={""} width={36} height={36}/>
+                  </a>
+                </li>
+              ))
+            }
           </ul>
         </nav>
       </Container>

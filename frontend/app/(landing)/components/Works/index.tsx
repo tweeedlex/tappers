@@ -2,38 +2,10 @@ import React, { FC } from 'react';
 import Container from "@/components/layout/Container";
 import Image from "next/image";
 import classNames from "classnames";
+import {getWorks} from "@/requests/works";
 
-const Works: FC = () => {
-  const works = [
-    {
-      img: "crabs.jpg",
-      title: "Crabs",
-      description: "An interesting project with a lot of interactivity. The project implements unique " +
-        "solutions: daily tasks, mini-games (secret box, combo), list of top users, store of improvements and temporary " +
-        "boosts, referral system and much more."
-    },
-    {
-      img: "hempton.jpg",
-      title: "Hempton",
-      description: "An interesting project with a lot of interactivity. The project implements unique " +
-        "solutions: daily tasks, mini-games (secret box, combo), list of top users, store of improvements and temporary " +
-        "boosts, referral system and much more."
-    },
-    {
-      img: "poke.jpg",
-      title: "Pokie",
-      description: "An interesting project with a lot of interactivity. The project implements unique " +
-        "solutions: daily tasks, mini-games (secret box, combo), list of top users, store of improvements and temporary " +
-        "boosts, referral system and much more."
-    },
-    {
-      img: "tonero.jpg",
-      title: "Tonero",
-      description: "An interesting project with a lot of interactivity. The project implements unique " +
-        "solutions: daily tasks, mini-games (secret box, combo), list of top users, store of improvements and temporary " +
-        "boosts, referral system and much more."
-    },
-  ]
+const Works: FC = async () => {
+  const {data: works} = await getWorks();
 
   return (
     <Container>
@@ -48,7 +20,7 @@ const Works: FC = () => {
                   style={{ transition: "all .6s cubic-bezier(.08,.7,.63,.8)" }}
                   width={360}
                   height={575}
-                  src={`/img/landing/works/${work.img}`}
+                  src={`${process.env.NEXT_PUBLIC_API_URL}${work.img.url}`}
                   alt={""}
                 />
               </div>
