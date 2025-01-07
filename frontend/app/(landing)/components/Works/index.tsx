@@ -9,7 +9,7 @@ const Works: FC = async () => {
 
   return (
     <Container>
-      <h2 id={"portfolio"} className={"h2 text-center pb-10"}> Some of our <span className={"text-secondary"}>favourite</span> projects </h2>
+      <h2 className={"works h2 text-center pb-10"}> Some of our <span className={"text-secondary"}>favourite</span> projects </h2>
       <div className={"flex flex-col gap-10 items-center"}>
         {
           works.map((work, i) => (

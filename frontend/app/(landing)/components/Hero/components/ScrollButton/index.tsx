@@ -5,7 +5,7 @@ import Button from "@/components/ui/Button";
 
 const ScrollButton: FC = () => {
   const scrollToPortfolio = () => {
-    const portfolio = document.getElementById("portfolio");
+    const portfolio = document.querySelector(".works");
     if (portfolio) {
       window.scrollTo({
         top: portfolio.offsetTop,

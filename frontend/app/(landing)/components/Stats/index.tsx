@@ -23,7 +23,7 @@ const Stats: FC = () => {
   ];
 
   return (
-    <Container>
+    <Container className={"stats"}>
       <div className={"flex flex-col gap-3"}>
         <h2 className={"h2"}>Tappers created popular games and apps with 500k+ users</h2>
         <p className={"subtitle"}>
