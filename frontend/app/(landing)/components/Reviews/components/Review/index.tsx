@@ -1,4 +1,5 @@
 import React, {FC} from 'react';
+import Image from "next/image";
 
 interface Props {
   review: {
@@ -15,7 +16,7 @@ const Review: FC<Props> = ({ review }) => {
     <div className={"flex relative justify-center m:px-10 m:mx-20 px-5 mx-5 py-5 m:py-10 rounded-[20px] m:gap-20 m:flex-row flex-col items-start gap-4"} style={{background: "rgba(255, 255, 255, 0.05)"}}>
       <div className={"flex m:flex-col xs:flex-row flex-col m:gap-3 justify-between w-full xs:gap-6 gap-3 m:w-1/2"}>
         <div className={"flex gap-3 items-center"}>
-          <img width={24} height={24} className={"rounded-[50%]"} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS73cBGXgAcR_gEAY-dpuRxl_slwflwjbMhNw&s"} />
+          <Image width={24} height={24} alt={review.company} className={"rounded-[50%]"} src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS73cBGXgAcR_gEAY-dpuRxl_slwflwjbMhNw&s"} />
           <h4 className={"h4"}>{review.company}</h4>
         </div>
         <div className={"flex flex-col xs:gap-2 gap-1 xs:items-end m:items-start items-start text-start xs:text-end m:text-start"}>

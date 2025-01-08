@@ -1,11 +1,12 @@
 "use client";
 
-import React, {useRef, useEffect, useState} from 'react';
+import React, { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperInstance } from "swiper";
 import styles from "./Portfolio.module.scss";
 import classNames from "classnames";
-import { Mousewheel, Controller } from 'swiper/modules';
-import 'swiper/css';
+import { Mousewheel, Controller } from "swiper/modules";
+import "swiper/css";
 
 const Portfolio = () => {
   const [isSmall, setIsSmall] = useState(false);
@@ -16,9 +17,9 @@ const Portfolio = () => {
     };
 
     handleResize();
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -28,16 +29,33 @@ const Portfolio = () => {
 
   const [slidersAmount, setSlidersAmount] = useState(4);
 
-  const items = new Array(slidersAmount / 2).fill(0).map(_ => [
-    [{ img: "1.jpg" }, { img: "2.jpg" }, { img: "3.jpg" }, { img: "4.jpg" }, { img: "5.jpg" }, { img: "6.jpg" }],
-    [{ img: "7.jpg" }, { img: "8.jpg" }, { img: "9.jpg" }, { img: "10.jpg" }, { img: "11.jpg" }, { img: "12.jpg" }],
-  ]).flat();
+  const items = new Array(slidersAmount / 2)
+  .fill(0)
+  .map(() => [
+    [
+      { img: "1.jpg" },
+      { img: "2.jpg" },
+      { img: "3.jpg" },
+      { img: "4.jpg" },
+      { img: "5.jpg" },
+      { img: "6.jpg" },
+    ],
+    [
+      { img: "7.jpg" },
+      { img: "8.jpg" },
+      { img: "9.jpg" },
+      { img: "10.jpg" },
+      { img: "11.jpg" },
+      { img: "12.jpg" },
+    ],
+  ])
+  .flat();
 
-  const swiperRefs = useRef([]);
+  const swiperRefs = useRef<(SwiperInstance | null)[]>([]);
   const activeIndexRef = useRef(0);
   const isAnimatingRef = useRef(false);
 
-  const handleSlideChange = (activeSwiper) => {
+  const handleSlideChange = (activeSwiper: SwiperInstance) => {
     if (isAnimatingRef.current) return;
 
     const activeIndex = activeSwiper.activeIndex;
@@ -46,23 +64,22 @@ const Portfolio = () => {
     activeIndexRef.current = activeIndex;
     isAnimatingRef.current = true;
 
-    swiperRefs.current.forEach(swiper => {
+    swiperRefs.current.forEach((swiper) => {
       if (swiper && swiper !== activeSwiper && swiper.activeIndex !== activeIndex) {
-        swiper.slideTo(activeIndex, 300);  // Added 300ms animation duration
+        swiper.slideTo(activeIndex, 300);
       }
     });
 
-    // Reset animation flag after animation completes
     setTimeout(() => {
       isAnimatingRef.current = false;
-    }, 350);  // Slightly longer than animation to ensure completion
+    }, 350);
   };
-
 
   return (
     <div id={"portfolio"}>
       <h2 className="h2 text-center py-20 px-3">
-        <span className="text-secondary">Unique</span> ideas generate <span className="text-secondary">impressive</span> apps
+        <span className="text-secondary">Unique</span> ideas generate{" "}
+        <span className="text-secondary">impressive</span> apps
       </h2>
       <div className={"overflow-hidden"}>
         <div className="w-full h-[80vh] scale-[115%] flex gap-3">
