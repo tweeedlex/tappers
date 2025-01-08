@@ -5,6 +5,8 @@ import Works from "./components/Works";
 import Reviews from "./components/Reviews";
 import ContactUs from "./components/ContactUs";
 import FAQ from "./components/FAQ";
+import Stack from "./components/Stack";
+import ActionCall from "./components/ActionCall";
 import Footer from "@/components/layout/Footer";
 
 export default function Home() {
@@ -18,6 +20,8 @@ export default function Home() {
       <ContactUs />
       <FAQ />
       <Works />
+      <Stack />
+      <ActionCall />
       <Footer />
     </div>
   );

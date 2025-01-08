@@ -6,11 +6,13 @@
 
   --color-pink: #FF54CD;
   --color-light-pink: #E449C9;
+  --color-light-pink-transparent: rgba(228, 73, 201, 0.2);
   --color-lilac: #DA50FE;
   --color-purple: #7004A3;
   --color-blue: linear-gradient(130deg, #7E34FF 6.17%, #5E00FF 45.1%, #5E00FF 68.56%, #4900C6 94.53%);
 
   --color-primary: var(--color-light-pink);
+  --color-primary-transparent: var(--color-light-pink-transparent);
   --color-secondary: #50e3c2;
   --color-background: radial-gradient(271.5% 115.54% at 5% 16.38%, #100913 0%, #000 100%);
   --color-foreground: #fff;

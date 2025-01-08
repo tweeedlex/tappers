@@ -7,6 +7,7 @@ import Button from "@/components/ui/Button";
 import Container from "@/components/layout/Container";
 import {addContact} from "@/requests/contact";
 import {toastError, toastSuccess} from "@/helpers/toasts";
+import SocialLinks from "@/components/misc/SocialLinks";
 
 const ContactUs: FC = () => {
   const [formInfo, setFormInfo] = useState({
@@ -35,8 +36,8 @@ const ContactUs: FC = () => {
   return (
     <Container className={"contact flex flex-col gap-5 items-center"}>
         <p className={"text-secondary text-sm"}>Contact us</p>
-        <h2 className={"h2"}>Let's Talk!</h2>
-        <p className={"subtitle"}>We know that you want to implement your idea in reality. Why shouldn't we do this together?</p>
+        <h2 className={"h2"}>Let&#39;s Talk!</h2>
+        <p className={"subtitle"}>We know that you want to implement your idea in reality. Why shouldn&#39;t we do this together?</p>
         <div className={"flex w-full max-w-[600px] flex-col gap-3 items-center"}>
           <div className={"flex w-full flex-col gap-1 items-start"}>
             <p className={"text-sm text-primary"}>Name</p>
@@ -56,6 +57,7 @@ const ContactUs: FC = () => {
           </div>
           <Button onClick={handleSubmit} variant={"primary"} className={"m:min-w-[unset] mt-4 m:max-w-[fit-content] min-w-full mac-w-unset'"}>Submit</Button>
         </div>
+      <SocialLinks />
     </Container>
   );
 };
