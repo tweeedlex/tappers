@@ -1,4 +1,4 @@
-import {GetMeta, Image} from "@/requests/types";
+import {GetMeta} from "@/requests/types";
 
 type ReviewObject = {
   id: number;
@@ -10,7 +10,7 @@ type ReviewObject = {
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
-  avatar: Image;
+  avatar: string;
 };
 
 export type ReviewResponse = {

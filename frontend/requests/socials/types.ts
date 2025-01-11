@@ -1,4 +1,4 @@
-import { GetMeta, Image } from "@/requests/types";
+import { GetMeta } from "@/requests/types";
 
 type SocialObject = {
   id: number;
@@ -8,7 +8,7 @@ type SocialObject = {
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
-  icon: Image;
+  icon: string;
 };
 
 export type SocialsResponse = {

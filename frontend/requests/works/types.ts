@@ -1,4 +1,4 @@
-import { GetMeta, Image } from "@/requests/types";
+import { GetMeta } from "@/requests/types";
 
 type WorkObject = {
   id: number;
@@ -8,7 +8,7 @@ type WorkObject = {
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
-  img: Image;
+  img: string;
 };
 
 export type WorksResponse = {

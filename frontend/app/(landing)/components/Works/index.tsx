@@ -20,7 +20,7 @@ const Works: FC = async () => {
                   style={{ transition: "all .6s cubic-bezier(.08,.7,.63,.8)" }}
                   width={360}
                   height={575}
-                  src={`${process.env.NEXT_PUBLIC_API_URL}${work.img.url}`}
+                  src={work.img}
                   alt={""}
                 />
               </div>
