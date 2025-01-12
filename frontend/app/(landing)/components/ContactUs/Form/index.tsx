@@ -27,6 +27,12 @@ const Form: FC = () => {
     if (response.error) {
       return toastError("Unexpected error occurred. Please try again later.");
     }
+    setFormInfo({
+      name: "",
+      email: "",
+      budget: "",
+      message: ""
+    });
     toastSuccess("Thank you for your message! We will contact you soon.");
   };
 
