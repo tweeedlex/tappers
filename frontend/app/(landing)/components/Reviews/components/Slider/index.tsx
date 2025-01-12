@@ -13,6 +13,7 @@ type Review = {
   name: string;
   position: string;
   text: string;
+  avatar: string;
 }
 
 interface Props {
