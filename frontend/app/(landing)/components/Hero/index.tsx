@@ -6,6 +6,27 @@ import Container from "@/components/layout/Container";
 import ScrollButton from "./components/ScrollButton";
 
 const Hero: FC = () => {
+  const cards = [
+    {
+      id: 2,
+      subtitle: "Active users in our games last week",
+      title: "140k",
+      offsetY: 60
+    },
+    {
+      id: 1,
+      subtitle: "Games launched last month",
+      title: "5",
+      offsetY: 0
+    },
+    {
+      id: 3,
+      subtitle: "Happy clients last year",
+      title: "100%",
+      offsetY: -60
+    }
+  ]
+
   return (
     <div className={classNames("absolute mt-[-50px] mb-[-120px] w-full overflow-x-hidden h-screen flex items-center justify-center", styles.hero)}>
       <div className={"z-[2] absolute top-0 left-0 w-full h-full"}>
@@ -25,6 +46,23 @@ const Hero: FC = () => {
         <div
           className={classNames(styles.image, "z-[4] absolute l:w-[500px] w-[400px] h-[500px] scale-50 m:scale-[60%] l:scale-75 xl:scale-100 m:top-[50%] m:translate-y-[-50%] m:right-[0] m:left-[unset] m:bottom-0 bottom-10 left-[50%] translate-x-[-50%] m:translate-x-0")}
         >
+          <div className={"z-[5] absolute left-[50%] flex gap-5 top-[50%]"} style={{transform: "translate(-50%, -50%)"}}>
+            {cards.map(card => (
+              <div
+                key={card.id}
+                className={"animate__animated animate__fadeInRight min-h-[200px] flex flex-col relative justify-center gap-3 text-xl w-40 p-5 rounded-[40px]"}
+                style={{
+                  backdropFilter: "blur(10px)",
+                  background: "rgba(0, 0, 0, 0.1)",
+                  border: "1px solid rgba(255, 255, 255, 0.3)",
+                  top: `${card.offsetY}px`
+                }}
+              >
+                <p className={"text-xl"}>{card.subtitle}</p>
+                <p className={"text-4xl"}>{card.title}</p>
+              </div>
+            ))}
+          </div>
           <Image
             src={"/img/landing/hero/object.png"}
             alt={""}
@@ -69,6 +107,7 @@ const Hero: FC = () => {
           />
         </div>
       </Container>
+      <Image width={36} height={18} alt={""} src={"/img/landing/hero/arrow.png"} className={classNames(styles.arrow, "absolute bottom-5 rotate-90")} />
     </div>
   );
 };
