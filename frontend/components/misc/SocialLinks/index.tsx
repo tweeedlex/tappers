@@ -7,7 +7,7 @@ const SocialLinks: FC = async () => {
 
   return (
     <nav>
-      <ul className={"absolute top-[110px] right-0 s:static flex gap-2"}>
+      <ul className={"flex gap-2"}>
         {
           socials.map(social => (
             <li key={social.id}>

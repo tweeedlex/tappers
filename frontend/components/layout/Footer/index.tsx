@@ -39,7 +39,9 @@ const Footer: FC = async () => {
             ))}
           </ul>
         </nav>
-        <SocialLinks />
+        <div className={"absolute top-[110px] right-0 s:static"}>
+          <SocialLinks />
+        </div>
       </Container>
     </footer>
   );
