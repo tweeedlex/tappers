@@ -39,8 +39,8 @@ const Hero: FC = () => {
       </div>
       <Container className={"h-full flex items-center relative"}>
         <div className={"flex flex-col m:relative absolute m:top-0 top-[var(--height-header)] py-3 m:py-0 left-[50%] m:left-0 translate-x-[-50%] m:translate-x-0 gap-3 z-[5]"}>
-          <h1 className={classNames(styles.heading, "animate__animated animate__fadeInTopLeft relative z-[5] text-center m:text-left left-0 xl:left-[200px] l:left-20 m:left-10")}>TAPPERS</h1>
-          <h1 className={classNames(styles.heading, styles.white, "animate__animated animate__fadeInBottomLeft relative text-center m:text-left left-0 xl:left-[320px] l:left-40 m:left-20")}>STUDIOS</h1>
+          <h1 className={classNames(styles.heading, "animate__animated animate__fadeInTopLeft relative z-[5] text-center m:text-left left-0 xl:left-[160px] l:left-20 m:left-10")}>TAPPERS</h1>
+          <h1 className={classNames(styles.heading, styles.white, "animate__animated animate__fadeInBottomLeft relative text-center m:text-left left-0 xl:left-[280px] l:left-40 m:left-20")}>STUDIOS</h1>
           <ScrollButton />
         </div>
         <div
@@ -107,7 +107,7 @@ const Hero: FC = () => {
           />
         </div>
       </Container>
-      <Image width={36} height={18} alt={""} src={"/img/landing/hero/arrow.png"} className={classNames(styles.arrow, "absolute bottom-5 rotate-90")} />
+      <Image width={36} height={18} alt={""} src={"/img/landing/hero/arrow.png"} className={classNames(styles.arrow, "absolute bottom-5 z-[11] rotate-90")} />
     </div>
   );
 };

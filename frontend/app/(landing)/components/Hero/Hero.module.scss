@@ -2,6 +2,7 @@
     position: relative;
     top: calc(-1 * var(--height-header));
     height: calc(100vh);
+    overflow: hidden;
 }
 
 .arrow {
