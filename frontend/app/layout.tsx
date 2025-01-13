@@ -27,11 +27,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={"bg-background"}>
       <body
         className={`${outfit.variable} ${anton.variable} font-[family-name:var(--font-outfit)] antialiased`}
       >
-        <div className={"min-h-screen bg-background overflow-x-hidden"}>
+        <div className={"min-h-screen"}>
           <ToastContainer
             position="top-right"
             autoClose={3000}
