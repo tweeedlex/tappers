@@ -16,7 +16,7 @@ function FAQList({ initialFaqs }: FAQClientProps) {
   const [faqs, setFaqs] = useState(initialFaqs.map(faq => ({ ...faq, isActive: false })));
 
   return (
-    <div className={"w-full max-w-[600px] flex flex-col gap-3 items-start"}>
+    <div className={"w-full max-w-[800px] flex flex-col gap-3 items-start"}>
       {faqs.map((question) => (
         <div key={question.id} className={"flex flex-col gap-3"}>
           <div

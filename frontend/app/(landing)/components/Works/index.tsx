@@ -25,7 +25,7 @@ const Works: FC = async () => {
                 />
               </div>
               <div className={classNames("flex flex-col gap-2 m:gap-4 m:w-[300px]", (i % 2) && "text-right")}>
-                <p className={"m:text-5xl text-2xl"}>{work.title}</p>
+                <h3 className={"m:text-5xl text-2xl"}>{work.title}</h3>
                 <p className={"subtitle m:text-sm text-xs"}>{work.description}</p>
               </div>
             </div>

@@ -18,9 +18,9 @@ export default function Home() {
       {/*<Portfolio />*/}
       <Reviews />
       <ContactUs />
-      <FAQ />
-      <Works />
       <Stack />
+      <Works />
+      <FAQ />
       <ActionCall />
       <Footer />
     </div>
