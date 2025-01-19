@@ -14,9 +14,9 @@ interface Props {
 const FooterLink: FC<Props> = ({ link }) => {
   return (
     <li>
-      <a onClick={() => scrollToSection(link.class)} className={"cursor-pointer"}>
+      <button onClick={() => scrollToSection(link.class)} className={"cursor-pointer"}>
         {link.name}
-      </a>
+      </button>
     </li>
   );
 };

@@ -38,11 +38,13 @@ const Hero: FC = () => {
         <div className={classNames("top-[14%] right-0", styles.shadeBlue)}></div>
       </div>
       <Container className={"h-full flex items-center relative"}>
-        <div className={"flex flex-col m:relative absolute m:top-0 top-[var(--height-header)] py-3 m:py-0 left-[50%] m:left-0 translate-x-[-50%] m:translate-x-0 gap-3 z-[5]"}>
-          <h1 className={classNames(styles.heading, "animate__animated animate__fadeInTopLeft relative z-[5] text-center m:text-left left-0 xl:left-[160px] l:left-20 m:left-10")}>TAPPERS</h1>
-          <h1 className={classNames(styles.heading, styles.white, "animate__animated animate__fadeInBottomLeft relative text-center m:text-left left-0 xl:left-[280px] l:left-40 m:left-20")}>STUDIOS</h1>
+        <h1 className={"flex flex-col m:relative absolute m:top-0 top-[var(--height-header)] py-3 m:py-0 left-[50%] m:left-0 translate-x-[-50%] m:translate-x-0 gap-3 z-[5]"}>
+          <span className={classNames(styles.heading, "animate__animated animate__fadeInTopLeft relative z-[5] text-center m:text-left left-0 xl:left-[160px] l:left-20 m:left-10 uppercase")}>TAPPERS</span>
+          <span className={classNames(styles.heading, styles.white, "animate__animated animate__fadeInBottomLeft relative text-center m:text-left left-0 xl:left-[280px] l:left-40 m:left-20 uppercase")}>Studios</span>
+          {/* SEO */}
+          <span className={"hidden"}>Innovators in Telegram Mini App Development</span>
           <ScrollButton />
-        </div>
+        </h1>
         <div
           className={classNames(styles.image, "z-[4] absolute l:w-[500px] w-[400px] h-[500px] scale-50 m:scale-[60%] l:scale-75 xl:scale-100 m:top-[50%] m:translate-y-[-50%] m:right-[0] m:left-[unset] m:bottom-0 bottom-10 left-[50%] translate-x-[-50%] m:translate-x-0")}
         >
@@ -58,7 +60,7 @@ const Hero: FC = () => {
                   top: `${card.offsetY}px`
                 }}
               >
-                <p className={"text-xl"}>{card.subtitle}</p>
+                <p className={"text-2xl l:text-xl"}>{card.subtitle}</p>
                 <p className={"text-4xl"}>{card.title}</p>
               </div>
             ))}
