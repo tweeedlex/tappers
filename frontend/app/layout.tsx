@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Anton } from "next/font/google";
 import "../styles/globals.css";
 import {ToastContainer} from "react-toastify";
+import { GoogleAnalytics } from '@next/third-parties/google';
 import "animate.css";
 
 const outfit = Outfit({
@@ -29,14 +30,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={"bg-background"} style={{background: "#000"}}>
-      <body
-        className={`${outfit.variable} ${anton.variable} font-[family-name:var(--font-outfit)] antialiased`}
-      >
-        <div className={"min-h-screen"}>
-          <ToastContainer
-            position="top-right"
-            autoClose={3000}
-            hideProgressBar={false}
+    <body
+      className={`${outfit.variable} ${anton.variable} font-[family-name:var(--font-outfit)] antialiased`}
+    >
+    <div className={"min-h-screen"}>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
             newestOnTop={false}
             closeOnClick
             rtl={false}
@@ -48,6 +49,7 @@ export default function RootLayout({
           {children}
         </div>
       </body>
+      <GoogleAnalytics gsId="G-62GHVFRTVL" />
     </html>
   );
 }
