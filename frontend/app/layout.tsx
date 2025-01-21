@@ -4,7 +4,6 @@ import "../styles/globals.css";
 import {ToastContainer} from "react-toastify";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import "animate.css";
-import Head from "next/head";
 
 const outfit = Outfit({
   variable: "--font-outfit",
