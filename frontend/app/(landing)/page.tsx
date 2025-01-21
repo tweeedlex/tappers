@@ -17,9 +17,9 @@ export default function Home() {
       <Stats />
       {/*<Portfolio />*/}
       <Reviews />
-      <ContactUs />
       <Stack />
       <Works />
+      <ContactUs />
       <FAQ />
       <ActionCall />
       <Footer />
