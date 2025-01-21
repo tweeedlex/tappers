@@ -27,17 +27,14 @@ const organizationStructuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "TAPPERS Studio",
-  "url": "https://tappers.netlify.app",
-  "logo": "https://tappers.netlify.app/logo.png",
+  "url": "https://tappers.tech",
+  "logo": "https://tappers.tech/img/logo.png",
   "sameAs": [
-    "https://www.linkedin.com/company/tappers-studio",
-    "https://twitter.com/tappersstudio",
-    "https://github.com/tappersstudio"
+    "https://t.me/tappers_studios"
   ],
   "contactPoint": [
     {
       "@type": "ContactPoint",
-      "telephone": "+1234567890",
       "contactType": "Customer Service",
       "areaServed": "Global",
       "availableLanguage": ["English", "Ukrainian", "Russian"]
