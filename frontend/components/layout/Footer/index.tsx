@@ -33,7 +33,7 @@ const Footer: FC = async () => {
   return (
     <footer className={"py-10 w-full flex s:px-0 px-2 justify-center"}>
       <Container className={"flex relative items-center gap-5 justify-between"}>
-        <Image src={"/img/logo.png"} alt={"logo"} width={64} height={64} className={classNames(styles.logo, "absolute top-[100px] h-[70px] w-[52px]")}/>
+        <Image src={"/img/logo.png"} alt={"logo"} width={70} height={52} className={classNames(styles.logo, "absolute top-[100px] h-[70px] w-[52px]")}/>
         <nav>
           <ul className={"flex gap-5 flex-wrap items-center justify-center"}>
             {links.map(link => (
