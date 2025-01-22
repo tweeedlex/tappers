@@ -9,11 +9,11 @@ const Stats: FC = () => {
       subtitle: "Years of experience"
     },
     {
-      title: "20+",
+      title: "40+",
       subtitle: "Projects completed"
     },
     {
-      title: "50+",
+      title: "30+",
       subtitle: "Happy clients"
     },
     {

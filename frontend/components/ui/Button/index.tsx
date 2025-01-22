@@ -6,13 +6,14 @@ interface Props {
   onClick?: () => void;
   variant: string;
   className?: string;
+  style?: React.CSSProperties;
 }
 
-const Button: FC<Props> = ({ children, variant = "default", className, onClick }) => {
+const Button: FC<Props> = ({ children, variant = "default", className, onClick, style }) => {
   const classList = classNames(generateClasses(variant), className);
 
   return (
-    <button onClick={onClick} className={classList}>
+    <button onClick={onClick} className={classList} style={style}>
       {children}
     </button>
   );
