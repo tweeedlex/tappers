@@ -46,7 +46,7 @@ const Hero: FC = () => {
           <ScrollButton />
         </h1>
         <div
-          className={classNames(styles.image, "z-[4] absolute l:w-[500px] w-[400px] h-[500px] scale-50 m:scale-[60%] l:scale-75 xl:scale-100 m:top-[50%] m:translate-y-[-50%] m:right-[0] m:left-[unset] m:bottom-0 bottom-10 left-[50%] translate-x-[-50%] m:translate-x-0")}
+          className={classNames(styles.image, "z-[4] absolute l:w-[500px] w-[400px] h-[500px] scale-50 m:scale-[60%] l:scale-75 xl:scale-100 m:top-[50%] m:translate-y-[-50%] m:right-[0] m:left-[unset] xl:right-[40px] m:bottom-0 bottom-10 left-[50%] translate-x-[-50%] m:translate-x-0")}
         >
           <div className={"z-[5] absolute left-[50%] flex gap-5 top-[50%]"} style={{transform: "translate(-50%, -50%)"}}>
             {cards.map(card => (
