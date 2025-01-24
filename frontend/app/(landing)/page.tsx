@@ -7,6 +7,7 @@ import ContactUs from "./components/ContactUs";
 import FAQ from "./components/FAQ";
 import Stack from "./components/Stack";
 import ActionCall from "./components/ActionCall";
+import LetsTalk from "./components/LetsTalk";
 import Footer from "@/components/layout/Footer";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       <FAQ />
       <ActionCall />
       <Footer />
+      <LetsTalk />
     </div>
   );
 }

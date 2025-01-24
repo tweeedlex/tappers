@@ -86,3 +86,7 @@ img {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
   background-color: var(--color-primary);
 }
+
+.animate-spin {
+  animation: spin 3s linear infinite;
+}

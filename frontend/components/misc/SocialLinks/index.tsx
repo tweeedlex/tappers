@@ -11,7 +11,7 @@ const SocialLinks: FC = async () => {
         {
           socials.map(social => (
             <li key={social.id}>
-              <a href={social.link}>
+              <a href={social.link} target={"_blank"}>
                 <Image src={social.icon} alt={""} width={36} height={36}/>
               </a>
             </li>
