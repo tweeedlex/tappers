@@ -10,6 +10,10 @@ import "swiper/css";
 
 const Portfolio = () => {
   const [isSmall, setIsSmall] = useState(false);
+  const [slidersAmount, setSlidersAmount] = useState(4);
+  const swiperRefs = useRef<(SwiperInstance | null)[]>([]);
+  const activeIndexRef = useRef<number>(0);
+  const isAnimatingRef = useRef(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,8 +30,6 @@ const Portfolio = () => {
   useEffect(() => {
     setSlidersAmount(isSmall ? 2 : 4);
   }, [isSmall]);
-
-  const [slidersAmount, setSlidersAmount] = useState(4);
 
   const items = new Array(slidersAmount / 2)
   .fill(0)
@@ -50,10 +52,6 @@ const Portfolio = () => {
     ],
   ])
   .flat();
-
-  const swiperRefs = useRef<(SwiperInstance | null)[]>([]);
-  const activeIndexRef = useRef(0);
-  const isAnimatingRef = useRef(false);
 
   const handleSlideChange = (activeSwiper: SwiperInstance) => {
     if (isAnimatingRef.current) return;
